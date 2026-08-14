@@ -1,0 +1,291 @@
+/* ==========================================================================
+   EDUCATOR - RESPONSIVE STYLESHEET
+   ========================================================================== */
+
+/* --- Extra Large Screens (> 1200px) --- */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/* --- Laptops & Small Desktops (992px to 1199px) --- */
+@media (max-width: 1199px) {
+  h1 { font-size: 2.35rem; }
+  h2 { font-size: 1.85rem; }
+  
+  .hero-title { font-size: 2.85rem; }
+  
+  .feature-strip-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .instructors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.5fr 1fr 1fr 1.25fr;
+  }
+
+  .dashboard-layout {
+    grid-template-columns: 220px 1fr;
+  }
+
+  .dashboard-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --- Tablets (768px to 991px) --- */
+@media (max-width: 991px) {
+  .top-bar {
+    display: none; /* Hide dense top bar on tablet/mobile for cleaner UX */
+  }
+
+  .nav-menu, .nav-actions .btn-primary, .nav-actions .btn-gold, .top-auth-links {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-trust {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .floating-card-1 {
+    left: 0;
+  }
+
+  .floating-card-2 {
+    right: 0;
+  }
+
+  .welcome-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .welcome-images {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .catalog-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog-sidebar {
+    position: static;
+    margin-bottom: 2rem;
+  }
+
+  .course-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .course-sidebar-card {
+    position: static;
+    margin-top: 2.5rem;
+  }
+
+  .roadmap-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .roadmap-grid::before {
+    display: none;
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cta-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 3.5rem 2rem;
+  }
+
+  .cta-actions {
+    justify-content: center;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-sidebar {
+    display: none; /* Collapsible or overlay on mobile */
+  }
+}
+
+/* --- Mobile Phones (< 767px) --- */
+@media (max-width: 767px) {
+  body {
+    font-size: 15px;
+  }
+
+  .section {
+    padding: 3.75rem 0;
+  }
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+  h3 { font-size: 1.3rem; }
+
+  .hero-section {
+    padding: 4rem 0 5.5rem 0;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+  }
+
+  .hero-main-img {
+    height: 340px;
+  }
+
+  .floating-card {
+    padding: 0.75rem 1rem;
+  }
+
+  .floating-card-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .feature-strip-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-strip-section {
+    margin-top: -2rem;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .instructors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .roadmap-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome-checklist {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome-img-main {
+    height: 340px;
+  }
+
+  .welcome-stat-badge {
+    padding: 1rem 1.25rem;
+    bottom: -15px;
+    right: 0;
+  }
+
+  .welcome-stat-badge .stat-number {
+    font-size: 1.75rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .auth-card {
+    padding: 2rem 1.25rem;
+  }
+
+  .dashboard-main {
+    padding: 1.5rem 1rem;
+  }
+
+  .dashboard-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-view-paper {
+    padding: 2rem 1rem;
+    border-width: 6px;
+  }
+
+  .cert-paper-title {
+    font-size: 1.5rem;
+  }
+
+  .cert-recipient-name {
+    font-size: 1.4rem;
+    padding: 0.25rem 1rem;
+  }
+
+  #toast-container {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .toast {
+    min-width: 100%;
+  }
+}

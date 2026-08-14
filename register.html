@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Your Free Account — Educator</title>
+  <meta name="description" content="Join thousands of students and instructors on Educator. Start learning or teaching in-demand tech and leadership skills.">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon"><svg style="width: 22px; height: 22px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 14l9-5-9-5-9 5 9 5z"></path></svg></div>
+        <span>Educator<span class="accent">.</span></span>
+      </a>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="courses.html" class="nav-link">Courses</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-secondary btn-sm">Sign In</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- AUTHENTICATION FORM WRAPPER -->
+  <main class="auth-page-wrap">
+    <div class="auth-card" style="max-width: 520px;">
+      <div class="auth-header">
+        <div class="brand-logo" style="justify-content: center; margin-bottom: 1rem;">
+          <div class="logo-icon"><svg style="width: 22px; height: 22px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 14l9-5-9-5-9 5 9 5z"></path></svg></div>
+          <span>Educator<span class="accent">.</span></span>
+        </div>
+        <h1>Create Free Account</h1>
+        <p style="font-size: 0.9rem; color: var(--text-muted);">Start your learning journey with lifetime course access today.</p>
+      </div>
+
+      <form id="register-form">
+        <!-- Account Role Selector -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1.5rem; background: var(--bg-surface); padding: 0.4rem; border-radius: var(--radius-md);">
+          <label style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.55rem; background: var(--bg-white); border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 700; color: var(--brand-blue); cursor: pointer; box-shadow: var(--shadow-sm);">
+            <input type="radio" name="user-role" value="Student" checked style="accent-color: var(--brand-blue);">
+            <span>I am a Student</span>
+          </label>
+          <label style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.55rem; border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 600; color: var(--text-muted); cursor: pointer;">
+            <input type="radio" name="user-role" value="Instructor" style="accent-color: var(--brand-blue);">
+            <span>I am an Instructor</span>
+          </label>
+        </div>
+
+        <!-- Full Name -->
+        <div class="form-group">
+          <label class="form-label" for="reg-name">Full Name *</label>
+          <input type="text" id="reg-name" class="form-input" placeholder="e.g. Alex Morgan" required>
+          <div class="form-error-msg" id="reg-name-error">Please enter your full name</div>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label class="form-label" for="reg-email">Email Address *</label>
+          <input type="email" id="reg-email" class="form-input" placeholder="name@example.com" required>
+          <div class="form-error-msg" id="reg-email-error">Please enter a valid email address</div>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label class="form-label" for="reg-password">Create Password *</label>
+          <div class="input-control-wrap">
+            <input type="password" id="reg-password" class="form-input" placeholder="Minimum 6 characters" required>
+            <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">
+              <svg style="width:20px;height:20px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+            </button>
+          </div>
+          <div class="password-strength-meter">
+            <div id="password-strength-bar" class="strength-bar"></div>
+          </div>
+          <div id="password-strength-text" style="font-size: 0.75rem; margin-top: 0.25rem;"></div>
+          <div class="form-error-msg" id="reg-pass-error">Password must be at least 6 characters</div>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="form-group">
+          <label class="form-label" for="reg-confirm-password">Confirm Password *</label>
+          <div class="input-control-wrap">
+            <input type="password" id="reg-confirm-password" class="form-input" placeholder="Repeat your password" required>
+          </div>
+          <div class="form-error-msg" id="reg-confirm-error">Passwords do not match</div>
+        </div>
+
+        <!-- Terms Agreement -->
+        <div style="margin-bottom: 1.5rem;">
+          <label style="display: flex; align-items: flex-start; gap: 0.65rem; font-size: 0.85rem; color: var(--text-muted); cursor: pointer;">
+            <input type="checkbox" id="reg-terms" required style="margin-top: 3px; cursor: pointer;">
+            <span>I agree to Educator's <a href="about.html" style="color: var(--brand-blue); text-decoration: underline;">Terms of Service</a> and <a href="about.html" style="color: var(--brand-blue); text-decoration: underline;">Privacy Policy</a>.</span>
+          </label>
+          <div class="form-error-msg" id="reg-terms-error">You must accept the terms to proceed</div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-bottom: 1.25rem;">Create Account</button>
+
+        <div style="text-align: center; font-size: 0.9rem; color: var(--text-muted);">
+          Already have an account? <a href="login.html" style="color: var(--brand-blue); font-weight: 700;">Sign In</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" style="padding-top: 2rem;">
+    <div class="container footer-bottom" style="border-top: none;">
+      <div class="footer-bottom-inner">
+        <div>© 2026 Educator Education Platform. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="about.html">Privacy Policy</a>
+          <a href="about.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
